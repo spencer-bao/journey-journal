@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bf1qmtr3n7rkt"]
+[gd_scene load_steps=10 format=3 uid="uid://bf1qmtr3n7rkt"]
 
 [ext_resource type="Script" path="res://StartMenu.gd" id="1_ofwwf"]
 [ext_resource type="AudioStream" uid="uid://dntg8j7ymjb0w" path="res://KH Menu Select.wav" id="2_0o6k4"]
+[ext_resource type="PackedScene" uid="uid://dtphr1xqrekyg" path="res://start_menu_intro.tscn" id="2_k3oe2"]
 [ext_resource type="AudioStream" uid="uid://b261ticfpxxtl" path="res://KH Select.wav" id="3_pap41"]
 [ext_resource type="AudioStream" uid="uid://coid7urhb3atn" path="res://1-01 Dearly Beloved.mp3" id="4_pav0r"]
 
@@ -10,24 +11,25 @@ default_font_size = 31
 
 [sub_resource type="LabelSettings" id="LabelSettings_4m3ao"]
 font_size = 70
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lvtkj"]
 font_size = 70
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_rs5by"]
 default_font_size = 35
 
-[node name="Control" type="Control"]
-layout_mode = 3
+[node name="StartMenu" type="ColorRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ofwwf")
 metadata/_edit_lock_ = true
+
+[node name="StartMenuIntro" parent="." instance=ExtResource("2_k3oe2")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 2
